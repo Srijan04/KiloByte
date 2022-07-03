@@ -1,0 +1,150 @@
+.container_clients{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+
+app-menu{
+    position:sticky;
+    top: 0px;
+    height: 100vh;
+    background-color: #016bff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+}
+.header h2{
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.search{
+    float: right;
+    margin-top: 18px;
+    margin-right: 20px;
+    height: 35px;
+    display: flex;
+    background-color: rgb(247, 247, 247);
+    border-radius: 20px;
+}
+
+.searchinput{
+    outline: none;
+    height: 35px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    width: 250px;
+    background-color: rgb(247, 247, 247);
+}
+
+.fa{
+    color: rgb(161, 161, 161);
+}
+
+.icon{
+    margin-top: 9px;
+    margin-left: 9px;
+}
+
+.header button{
+    background-color: rgb(130, 214, 172);
+    float: right;
+    margin-top: 10px;
+    width: 120px;
+    height: 50px;
+    border: 1px solid rgb(130, 214, 172);
+    border-radius: 15px;
+    color: white;
+    margin-right: 40px;
+}
+
+.header button:hover{
+    background-color: rgb(136, 226, 181);
+    border: 1px solid rgb(136, 226, 181);
+}
+
+.selector{
+    background-color: rgb(245, 245, 245);
+}
+
+.selector button{
+    display: inline-block;
+    margin: 14px;
+    border: 1px solid white;
+    background-color: white;
+    color: rgb(70, 166, 204);
+    font-weight: 600;
+    border-radius: 20px;
+    width: 40px;
+    height: 25px;
+    margin-left: 40px;
+}
+
+.selector select{
+    float: right;
+    margin: 14px;
+    margin-right: 40px;
+    border: 1px solid white;
+    height: 25px;
+    font-size: 12px;
+    width: 120px;
+    color: rgb(97, 97, 97);
+}
+
+
+table{
+    margin: 0px 40px;
+    margin-top: 40px;
+    width: 92%;
+}
+
+th{
+    color: rgb(184, 184, 184);
+    font-size: 13px;
+}
+
+th,td{
+    border-bottom: 0.5px solid rgb(236, 236, 236);
+    padding: 12px 0px;
+    padding-left: 10px;
+}
+
+.table_color{
+    color: #016bff;
+    cursor: pointer;
+}
+
+.iconic{
+    display: flex;
+    flex-direction: row;
+}
+
+
+table span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.not{
+    background-color: rgb(150, 150, 150);
+    font-size: 14px;
+    color: rgb(136, 136, 136);
+}
+.table{
+    box-shadow: 0 4px 0px 0 rgb(0 0 0 / 9%), 0 6px 10px 0 rgb(0 0 0 / 9%);
+}
+.hel{
+    color: rgba(98, 0, 255, 0.981);
+}

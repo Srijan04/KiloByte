@@ -1,0 +1,38 @@
+<div class="container_clients">
+    <app-sidebar></app-sidebar>
+    <div class="details">
+        <div class="header">
+            <h2>Clients</h2>
+            <button>+ Add Client</button>
+            <div class="search">
+                <i class="fa fa-search icon"></i>
+                <input class="searchinput" type="search" placeholder="Search using client name or client id" aria-label="Search">
+            </div>
+        </div>
+        <div class="selector">
+            <button>All</button>
+            <select>
+                <option value="members">All Members</option>
+            </select>
+        </div>
+        <table class="table"> 
+            <tr>
+                <th>Client Id</th>
+                <th>Company Name</th>
+                <th>Creation Date</th>
+                <th>Assigned Member</th>
+                <th>&nbsp;</th>
+            </tr>
+            <tr *ngFor="let rec of record">
+                <td class="table_color" (click)="onClick(rec._id,rec.companyName)">{{rec.clientID}}</td>
+                <td class="table_color"(click)="onClick(rec._id,rec.companyName)">{{rec.companyName}}</td>
+                <td>{{rec.createdAt | date:'mediumDate'}}</td>
+                <td><div *ngFor="let reco of rec.assignedMembers">{{reco.name}}</div></td>
+                <td class="iconic">
+                    <span class="material-icons hel">people_outline</span>
+                    <span class="material-icons not">do_not_disturb_alt</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

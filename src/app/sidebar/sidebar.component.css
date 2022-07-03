@@ -1,0 +1,53 @@
+.menu{
+    position:fixed;
+    top: 0px;
+    height: 100vh;
+    background-color: #3032d0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:150px;
+}
+
+.menu h1{
+    font-size: 28px;
+    color: white;
+    font-weight: bolder;
+    margin-bottom: 100px;
+}
+
+.menu div{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.menu div:hover{
+    background-color: rgba(204, 204, 204, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.menu p{
+    color: white;
+    font-size: 14px;
+    font-weight: lighter;
+    margin-bottom: 35px;
+}
+
+.menu .present{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 28px;
+    color: blue;
+    position: fixed;
+    bottom: 10px;
+}

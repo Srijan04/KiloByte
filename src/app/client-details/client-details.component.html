@@ -1,0 +1,96 @@
+<div class=" container_companyDetail d-flex">
+    <app-sidebar></app-sidebar>
+    <div class=" right-nav d-flex flex-column">
+      <div class="header-right-nav">
+        <i class="fa-solid fa-angle-left change-back-buttom cursor-pointer" (click)="bhag()"></i>
+        <span class="company-name">{{ companyName }}</span>
+        <h5 class="percentage-heading">
+          <span class="percentage-number head_detail">116.67% </span
+          ><span class="proile-completion">Proile Completion</span>
+        </h5>
+      </div>
+      <div class="top-nav d-flex align-center">
+        <div class="d-flex menu">
+          <h5 class="document cursor-pointer margin-0 active">Documents</h5>
+          <h5 class="document cursor-pointer margin-0">Tasks</h5>
+          <h5 class="document cursor-pointer margin-0">Payments</h5>
+          <h5 class="document cursor-pointer margin-0">Profile</h5>
+        </div>
+      <div style="width: 100%;"></div>
+        <div class="d-flex year_month">
+          <div class="fy">
+            <select name="Members" id="" class="year">
+              <option value="FY 2020-2021">FY 2020-2021</option>
+              </select>
+          </div>
+          <div>
+            <select name="Members" id="" class="year">
+              <option value="May">May</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="white-background d-flex document_section">
+        <div class="d-flex flex-column left-nav-border document_menu">
+          <h5 class="left-nav cursor-pointer margin-0 active-left">All</h5>
+          <h5 class="left-nav cursor-pointer margin-0">GST</h5>
+          <h5 class="left-nav cursor-pointer margin-0">TDS</h5>
+          <h5 class="left-nav cursor-pointer margin-0">TCS</h5>
+          <h5 class="left-nav cursor-pointer margin-0">ESI PF</h5>
+          <h5 class="left-nav cursor-pointer margin-0">ADVANCE TAX</h5>
+          <h5 class="left-nav cursor-pointer margin-0">INCOME TAX</h5>
+        </div>
+        <div class="upload-head documents">
+          <h4 style="color:#a2a9b2; margin-left: 8vh;">October</h4>
+          <div class="d-flex flex-wrap justify-center fileUpload">
+            <div *ngFor="let fileUpload of fileUploads">
+              <div class="card" *ngIf="fileUpload.status == 'COMPLETED'">
+                <div
+                  class="drag-upload-area d-flex justify-center align-center flex-column"
+                >
+                  <img
+                    [src]="fileUpload.folder[0].preview"
+                    alt=""
+                    width="136px"
+                  />
+                </div>
+                <div class="click-upload d-flex align-center flex-wrap">
+                  <div class="d-flex flex-wrap flex-column file-name-text">
+                    <h6 class="margin-0 file-name">{{ fileUpload.docType }}</h6>
+                    <h6 class="margin-0 folder">{{ fileUpload.type }}</h6>
+                  </div>
+                  <div class="d-flex rotate">
+                  <a [href]="fileUpload.folder[0].file" download
+                    ><i
+                      class="fa-solid fa-cloud-arrow-down download cursor-pointer"
+                    ></i>
+                  </a>
+                  <i class="fa-solid fa-pen"></i>
+                </div>
+                </div>
+              </div>
+              <div class="card" *ngIf="fileUpload.status == 'PENDING'">
+                <div
+                  class="drag-upload-area d-flex justify-center align-center flex-column"
+                >
+                  <i class="fa-solid fa-cloud-arrow-up"></i>
+                  <p class="drap-drop text-center">
+                    Drag and drop your document here
+                  </p>
+                </div>
+                <div class="click-upload d-flex align-center flex-wrap">
+                  <div class="d-flex flex-wrap flex-column file-name-text">
+                    <h5 class="margin-0 file-name">{{ fileUpload.docType }}</h5>
+                    <h5 class="margin-0 folder">{{ fileUpload.type }}</h5>
+                  </div>
+                  <input type="file" class="file-input " hidden (change)="onFileSelected($event, fileUpload._id)" #fileUploading style="display: none;" />
+                  <h6 class="margin-0 cursor-pointer upload"  (click)="fileUploading.click()">+ <br> Upload</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

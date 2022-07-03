@@ -1,0 +1,11 @@
+<div class="bg">
+<div class="login main">
+    <form class="form-right" [formGroup]="formGroup" (ngSubmit)="login()">
+        <h3>Welcome!</h3>
+        <input type="text" placeholder="   Email Id" formControlName="email">
+        <input type="password" placeholder="   Password" formControlName="password">
+        <button type="submit">Login</button>
+    </form>
+</div>
+</div>
+
